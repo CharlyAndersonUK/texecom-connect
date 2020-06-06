@@ -769,7 +769,7 @@ class TexecomConnect(object):
 
     def get_all_users(self):
         panel_users = {12: 8, 24: 25, 48: 50, 64: 50, 88: 100, 168: 200, 640: 1000}
-        for usernumber in range(1, panel_users[self.numberOfZones] + 1):
+        for usernumber in range(1, panel_users[self.numberOfZones]):
             user = self.get_user(usernumber)
             if user.valid():
                 self.user[usernumber] = user
